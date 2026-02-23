@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Diffusion Implicit Policy for Unpaired Motion Synthesis">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Diffusion Implicit Policy">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Human Motion Synthesis in 3D Scenes via Unified Scene Semantic Occupancy</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Human Motion Synthesis in 3D Scenes via Unified Scene Semantic Occupancy</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                  <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Jingyu Gong</a><sup>1,2,3</sup>,</span>
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Kunkun Tong</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Zhuoran Chen</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Chuanhan Yuan</a><sup>4</sup>,</span>
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Mingang Chen</a><sup>3</sup>,</span>
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Zhizhong Zhang</a><sup>1,3</sup>,</span>
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Xin Tan</a><sup>1,2</sup>,</span>
+              <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Yuan Xie</a><sup>1,2</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                      <span class="author-block"><sup>1</sup>East China Normal University<br><sup>2</sup>Chongqing Institute of East China Normal University<br><sup>2</sup>Shanghai Key Laboratory of Computer Software Evaluating and Testing<br><sup>4</sup>Chongqing University</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2511.07819" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/jingyugong/SSOMotion" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2511.07819" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-centered">
+        <img src="static/images/intro.jpg" width="75%"></img>
+        <h2 class="subtitle has-text-left">
+           Human motion synthesis within 3D Scene Semantic Occupancy (SSO). We decompose the SSO into bi-directional tri-plane as a unified scene representation. Human scene correlation is modeled as control signal for instruction-aware motion synthesis in 3D scenes. 
+        </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Human motion synthesis in 3D scenes relies heavily on scene comprehension, while current methods focus mainly on scene structure but ignore the semantic understanding. In this paper, we propose a human motion synthesis framework that take an unified Scene Semantic Occupancy (SSO) for scene representation, termed SSOMotion. We design a bi-directional tri-plane decomposition to derive a compact version of the SSO, and scene semantics are mapped to an unified feature space via CLIP encoding and shared linear dimensionality reduction. Such strategy can derive the fine-grained scene semantic structures while significantly reduce redundant computations. We further take these scene hints and movement direction derived from instructions for motion control via frame-wise scene query. Extensive experiments and ablation studies conducted on cluttered scenes using ShapeNet furniture, as well as scanned scenes from PROX and Replica datasets, demonstrate its cutting-edge performance while validating its effectiveness and generalization ability. Code will be publicly available at <a href="https://github.com/jingyugong/SSOMotion">https://github.com/jingyugong/SSOMotion</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Pipeline & Method</h2>
+          <!-- Interpolating. -->
+            <div class="content has-text-justified">
+            <img src="./static/images/decomp.jpg" 
+                 class="interpolation-image" 
+                 alt="Interpolate start reference image" 
+                 style="width: 100%; height: auto; display: block; margin: 0 auto;"></img>
+            <p>
+           Pipeline of the Scene Semantic Occupancy perception (SSO). (a) presents the Bi-directional Tri-plane Decomposition of the SSO, where scene color, semantics and depth are perceived in body-centered coordinate. In (b), we map the semantic labels into a unified semantic space via the CLIP textual encoder and a shared linear layer. Then, the unified low-dimension semantic features will be scattered into the semantic map. (c) indicates the normalization functions for distance and color space. 
+            </p>
+            <div class="content has-text-justified">
+            <img src="./static/images/network.jpg" 
+                 class="interpolation-image" 
+                 alt="Interpolate start reference image" 
+                 style="width: 100%; height: auto; display: block; margin: 0 auto;"></img>
+            <p>
+           Overview of (a) the  network for instruction-aware human motion synthesis in 3D scenes and (b) the motion controller based on Goal-directed Human Scene Correlation. 
+            </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Method. -->
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-3">Qualitative Results</h2>
+            </div>
+        </div>
+
+        <div class="columns is-centered">
+            <div class="column">
+                <div id="video-container">
+                    <center><p><span style="color:brown">Stand</span> up from the <span style="color:deepskyblue">sofa</span> and <span style="color:brown">walk</span> over to the <span style="color:deepskyblue">stool</span>, then <span style="color:brown">sit</span> on <span style="color:deepskyblue">it</span>.</p></center>
+                    <video id="video" autoplay controls muted loop playsinline height="20%">
+                        <source src="./static/videos/r-1.mp4#t=0.01"
+                              type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="column">
+                <div id="video-container">
+                    <center><p><span style="color:brown">Stand</span> up from the <span style="color:deepskyblue">chair</span> and <span style="color:brown">walk</span> over to the <span style="color:deepskyblue">sofa</span>, then <span style="color:brown">sit</span> on <span style="color:deepskyblue">it</span>.</p></center>
+                    <video id="video" autoplay controls muted loop playsinline height="20%">
+                        <source src="./static/videos/r-2.mp4#t=0.01"
+                              type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="column">
+                <div id="video-container">
+                    <center><p><span style="color:brown">Walk</span> over to the <span style="color:deepskyblue">sofa</span>, and then <span style="color:brown">sit</span> on <span style="color:deepskyblue">it</span>.</p><br></center>
+                    <video id="video" autoplay controls muted loop playsinline height="20%">
+                        <source src="./static/videos/r-3.mp4#t=0.01"
+                              type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-centered">
+            <div class="column">
+                <div id="video-container">
+                    <center><p><span style="color:brown">Stand</span> up from the <span style="color:deepskyblue">chair</span> and <span style="color:brown">walk</span> over to the other side of <span style="color:deepskyblue">table</span>.</p></center>
+                    <video id="video" autoplay controls muted loop playsinline height="20%">
+                        <source src="./static/videos/r-4.mp4#t=0.01"
+                              type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="column">
+                <div id="video-container">
+                    <center><p><span style="color:brown">Stand</span> up from the <span style="color:deepskyblue">sofa</span>, <span style="color:brown">walk</span> to the <span style="color:deepskyblue">door</span>, then <span style="color:brown">sit</span> back down on the <span style="color:deepskyblue">sofa</span>.</p></center>
+                    <video id="video" autoplay controls muted loop playsinline height="20%">
+                        <source src="./static/videos/r-5.mp4#t=0.01"
+                              type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="column">
+                <div id="video-container">
+                    <center><p><span style="color:brown">Stand</span> up from the <span style="color:deepskyblue">bed</span> and <span style="color:brown">walk</span> over to the <span style="color:deepskyblue">chair</span>, then <span style="color:brown">sit</span> down on <span style="color:deepskyblue">it</span>.</p></center>
+                    <video id="video" autoplay controls muted loop playsinline height="20%">
+                        <source src="./static/videos/r-6.mp4#t=0.01"
+                              type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-centered">
+            <div class="column">
+                <div id="video-container">
+                    <center><p><span style="color:brown">Walk</span> over to the <span style="color:deepskyblue">sofa</span> and <span style="color:brown">sit</span> down on <span style="color:deepskyblue">it</span>.</p><br></center>
+                    <video id="video" autoplay controls muted loop playsinline height="20%">
+                        <source src="./static/videos/p-1.mp4#t=0.01"
+                              type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="column">
+                <div id="video-container">
+                    <center><p><span style="color:brown">Stand</span> up from the <span style="color:deepskyblue">chair</span>, <span style="color:brown">walk</span> to the <span style="color:deepskyblue">whiteboard</span>.</p></center>
+                    <video id="video" autoplay controls muted loop playsinline height="20%">
+                        <source src="./static/videos/p-2.mp4#t=0.01"
+                              type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="column">
+                <div id="video-container">
+                    <center><p><span style="color:brown">Stand</span> up from the <span style="color:deepskyblue">bed</span> and <span style="color:brown">walk</span> over to the <span style="color:deepskyblue">chair</span>, then <span style="color:brown">sit</span> down on <span style="color:deepskyblue">it</span>.</p></center>
+                    <video id="video" autoplay controls muted loop playsinline height="20%">
+                        <source src="./static/videos/p-3.mp4#t=0.01"
+                              type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-centered">
+            <div class="column">
+                <div id="video-container">
+                    <center><p><span style="color:brown">Stand</span> up from the <span style="color:deepskyblue">sofa</span> and <span style="color:brown">go</span> out.</p><br></center>
+                    <video id="video" autoplay controls muted loop playsinline height="20%">
+                        <source src="./static/videos/p-4.mp4#t=0.01"
+                              type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="column">
+                <div id="video-container">
+                    <center><p><span style="color:brown">Walk</span> over to the <span style="color:deepskyblue">bed</span> and <span style="color:brown">sit</span> down on <span style="color:deepskyblue">it</span>.</p><br></center>
+                    <video id="video" autoplay controls muted loop playsinline height="20%">
+                        <source src="./static/videos/p-5.mp4#t=0.01"
+                              type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="column">
+                <div id="video-container">
+                    <center><p><span style="color:brown">Stand</span> up from the <span style="color:deepskyblue">sofa</span> and <span style="color:brown">walk</span> over to the <span style="color:deepskyblue">chair</span>, then <span style="color:brown">sit</span> down on <span style="color:deepskyblue">it</span>.</p></center>
+                    <video id="video" autoplay controls muted loop playsinline height="20%">
+                        <source src="./static/videos/p-6.mp4#t=0.01"
+                              type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+      @inproceedings{gong2026ssomotion,
+          title={Human Motion Synthesis in 3D Scenes via Unified Scene Semantic Occupancy},
+          author={Gong, Jingyu and Tong, Kunkun and Chen, Zhuoran and Yuan, Chuanhan and Chen, Mingang and Zhang, Zhizhong and Tan, Xin and Xie, Yuan},
+          booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+          year={2026}
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
